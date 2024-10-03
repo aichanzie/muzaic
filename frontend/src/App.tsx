@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material';
 import { lightTheme, darkTheme } from './theme';
 import { Button } from '@mui/material';
 import { CssBaseline } from '@mui/material/';
+import darkLogo from './assets/muzaic_dark.svg'
 import '@fontsource-variable/open-sans';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <div style={{ padding: '20px' }}>
         <h1>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</h1>
         <Button variant="contained" onClick={toggleTheme}>
+          <img src={darkLogo}></img>
           Toggle Theme
         </Button>
       </div>
