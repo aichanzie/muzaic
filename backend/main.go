@@ -5,8 +5,8 @@ import (
     "fmt"
     "log"
     "net/http"
-
     "github.com/gorilla/mux"
+    "routes"
 )
 
 type Founder struct{
@@ -34,15 +34,27 @@ func formHandler(w http.ResponseWriter, r *http.Request){
     json.NewEncoder(w).Encode(founders)
 }
 
-func main(){
-    r := mux.NewRouter()
+// func main(){
+//     r := mux.NewRouter()
 
-    founders = append(founders, Founder{Name:"Mehul",Age:23,Email:"random@random.com",Company: "BharatX"})
+//     founders = append(founders, Founder{Name:"Mehul",Age:23,Email:"random@random.com",Company: "BharatX"})
 
-    r.HandleFunc("/",greetingsHandler).Methods("GET")
-    r.HandleFunc("/form",formHandler).Methods("POST")
+//     r.HandleFunc("/",greetingsHandler).Methods("GET")
+//     r.HandleFunc("/form",formHandler).Methods("POST")
 
-    fmt.Println("Hello from GoServer 👋")
-    fmt.Print("Starting server at port 8000\n")
-    log.Fatal(http.ListenAndServe(":8000",r))
+//     fmt.Println("Hello from GoServer 👋")
+//     fmt.Print("Starting server at port 8000\n")
+//     log.Fatal(http.ListenAndServe(":8000",r))
+// }
+
+
+func main() {
+	// Attempt to connect to MongoDB
+	collection := routes.Connect()
+
+	if collection != nil {
+		fmt.Println("MongoDB connection successful.")
+	} else {
+		log.Fatal("Failed to connect to MongoDB.")
+	}
 }
