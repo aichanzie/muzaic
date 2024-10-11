@@ -50,7 +50,7 @@ function NavigationBar({ isDarkMode, onSelectTheme }: Props) {
             MUSIC
           </Link>
           <Link
-            href={"/"}
+            href={"/podcasts"}
             color="inherit"
             underline="none"
             variant="button"
