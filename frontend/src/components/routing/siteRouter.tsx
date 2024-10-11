@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MusicPage from "../../pages/music/music-page";
 import PodcastsPage from "../../pages/podcast/podcasts-page";
