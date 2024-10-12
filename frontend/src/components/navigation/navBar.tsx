@@ -89,7 +89,12 @@ function NavigationBar({ isDarkMode, onSelectTheme }: Props) {
           >
             SIGN IN
           </Button>
-          <Button variant="contained" color="secondary" disableRipple>
+          <Button
+            variant="contained"
+            color="secondary"
+            disableRipple
+            style={{ borderRadius: "50px" }}
+          >
             LOG IN
           </Button>
           <IconButton disableRipple>

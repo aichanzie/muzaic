@@ -1,6 +1,6 @@
 import PageCarousels from "../../components/page-carousels/page-carousels";
 
-function MusicPage() {
+export default function MusicPage() {
   return (
     <div>
       <PageCarousels />
@@ -8,5 +8,3 @@ function MusicPage() {
     </div>
   );
 }
-
-export default MusicPage;
