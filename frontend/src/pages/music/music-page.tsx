@@ -1,3 +1,4 @@
+import CreatorAvatar from "../../components/avatars/creator-avatar";
 import PageCarousels from "../../components/page-carousels/page-carousels";
 
 function MusicPage() {
@@ -5,6 +6,7 @@ function MusicPage() {
     <div>
       <PageCarousels />
       Music Page
+      <CreatorAvatar />
     </div>
   );
 }

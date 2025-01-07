@@ -1,0 +1,47 @@
+.image-container {
+    background-color: red;
+    width: 200px;
+    height: 315px;
+
+    border-radius: 178px;
+}
+
+.avatar-wrapper {
+    padding: 20px 15px 20px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    position: relative;
+    h4 {
+        width: 100%;
+        margin: 5px 0px;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.avatar-play-button {
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: black; /* Black background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 50%;
+}
+
+.avatar-play-icon {
+    font-size: 4.5rem; /* Size of the icon */
+}
+
+.avatar-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+
+    h4 {
+        text-decoration: underline;
+    }
+}
