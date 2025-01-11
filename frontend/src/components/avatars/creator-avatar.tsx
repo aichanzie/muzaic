@@ -22,7 +22,7 @@ function CreatorAvatar() {
     const buttons = Array(6).fill(null); // Example: 5 buttons in a row
     return (
         <>
-            <Grid container spacing={1} style={{ justifyContent: "center" }}>
+            <Grid container spacing={2} style={{ justifyContent: "center" }}>
                 {buttons.map((_, index) => (
                     <Grid
                         key={index}

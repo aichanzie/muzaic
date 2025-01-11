@@ -8,7 +8,7 @@ function RankingCard() {
     const theme = useTheme();
     const [isHoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    const hexToRgba = (hex: string, opacity: number) => {
+    const hexToRgba = (hex: String, opacity: Number) => {
         // Remove "#" if present
         const cleanHex = hex.replace("#", "");
 
@@ -23,7 +23,7 @@ function RankingCard() {
     return (
         <>
             <h3>Ranking Cards</h3>
-            <Grid container style={{ justifyContent: "center" }}>
+            <Grid container spacing={2} style={{ justifyContent: "center" }}>
                 {buttons.map((_, index) => (
                     <Grid
                         key={index}
