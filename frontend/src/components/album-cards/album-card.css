@@ -1,0 +1,38 @@
+.album-card-wrapper {
+    padding: 20px 15px 20px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    position: relative;
+    h4 {
+        width: 100%;
+        margin: 5px 0px;
+    }
+    p {
+        margin: 0;
+    }
+}
+.album-card-wrapper:hover {
+    h4 {
+        text-decoration: underline;
+    }
+}
+/* .album-card-cover-image {
+} */
+
+.album-play-button {
+    position: absolute;
+    bottom: 30%;
+    right: 3%;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: black; /* Black background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 50%;
+}
+
+.album-play-icon {
+    font-size: 5.5rem; /* Size of the icon */
+}
