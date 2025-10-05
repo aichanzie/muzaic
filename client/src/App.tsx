@@ -1,10 +1,9 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
     return (
         <>
-            <p className="read-the-docs">Welcome to muzaic!</p>
+            <p className="text-6xl text-gray-400">Welcome to muzaic!</p>
         </>
     );
 }
