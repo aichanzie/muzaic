@@ -1,10 +1,14 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Library from "./pages/Library/Library";
 
 function App() {
     return (
-        <>
-            <p className="text-6xl text-gray-400">Welcome to muzaic!</p>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Library />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
