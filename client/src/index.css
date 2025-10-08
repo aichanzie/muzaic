@@ -1,70 +1,98 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+	/* Your color palette */
+	/* 🥕 Carrot (orange-red) */
+	--color-carrot-100: oklch(97.5% 0.03 28.2);
+	--color-carrot-200: oklch(85% 0.1 28.2);
+	--color-carrot-300: oklch(74% 0.18 28.2);
+	--color-carrot-400: oklch(65.2% 0.278 28.3);
+	--color-carrot-500: oklch(55% 0.22 28.2);
+	--color-carrot-600: oklch(45% 0.15 28.2);
+
+	/* 🍇 Plum (deep purple) */
+	--color-plum-100: oklch(95% 0.01 340);
+	--color-plum-200: oklch(65% 0.05 341.5);
+	--color-plum-300: oklch(45% 0.08 341.6);
+	--color-plum-400: oklch(24.9% 0.101 341.8);
+	--color-plum-500: oklch(18% 0.07 342);
+	--color-plum-600: oklch(12% 0.04 342);
+
+	/* ⚫ Black */
+	--color-black-100: oklch(28% 0.012 7.2);
+	--color-black-200: oklch(22% 0.0095 7.2);
+	--color-black-300: oklch(17% 0.007 7.2);
+	--color-black-400: oklch(11.87% 0.004 7.17);
+	--color-black-500: oklch(8% 0.003 7);
+	--color-black-600: oklch(5% 0.001 7);
+
+	/* ⚪ White */
+	--color-white-100: oklch(100% 0 0);
+	--color-white-200: oklch(98% 0 0);
+	--color-white-300: oklch(96% 0 0);
+	--color-white-400: oklch(94% 0 0);
+	--color-white-500: oklch(92% 0 0);
+	--color-white-600: oklch(90% 0 0);
+
+	/* Semantic colors - Light mode (direct values) */
+	--color-background: oklch(100% 0 0);
+	--color-surface: oklch(98% 0 0);
+	--color-primary: oklch(11.87% 0.004 7.17);
+	--color-secondary: oklch(24.9% 0.101 341.8);
+	--color-accent: oklch(65.2% 0.278 28.3);
+	--color-text: oklch(11.87% 0.004 7.17);
+	--color-text-muted: oklch(20% 0.008 7);
+}
+
+/* Semantic colors for light mode  */
+/* @theme inline {
+    --color-background: var(--color-white-100);
+    --color-surface: var(--color-white-200);
+    --color-primary: var(--color-carrot-400);
+    --color-secondary: var(--color-plum-400);
+    --color-accent: var(--color-carrot-300);
+    --color-text: var(--color-black-400);
+    --color-text-muted: var(--color-black-200);
+} */
+
+/* Dark mode overrides */
+.dark {
+	--color-background: var(--color-black-400);
+	--color-surface: var(--color-black-300);
+	--color-primary: var(--color-white-400);
+	--color-secondary: var(--color-carrot-400);
+	--color-accent: var(--color-plum-400);
+	--color-text: var(--color-white-100);
+	--color-text-muted: var(--color-white-300);
+}
+
+/* Enable dark mode variant */
+@variant dark (&:where(.dark, .dark *));
 
 :root {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+	/* Default fonts */
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+	/* Default Colors */
+	/* 
+      carrot: #fa4500;
+      plum: #4a073a || #650c51;
+      black: #100F0F;
+      white: #ffffff;
+    */
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+	/* Layout */
+	margin: 0;
+	min-width: 100vw;
+	min-height: 100vh;
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
-}
-
-body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
