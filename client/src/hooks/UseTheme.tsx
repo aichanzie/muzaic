@@ -9,6 +9,7 @@ function getSystemTheme(): 'light' | 'dark' {
 
 function applyTheme(theme: Theme): 'light' | 'dark' {
 	const root = document.documentElement;
+	localStorage.setItem(THEME_KEY, theme);
 
 	if (theme === 'dark') {
 		root.classList.add('dark');

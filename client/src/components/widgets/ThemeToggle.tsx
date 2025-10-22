@@ -1,6 +1,6 @@
 import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../../../hooks/UseTheme';
-import IconButton from '../../common/IconButton/IconButton';
+import { useTheme } from '../../hooks/UseTheme';
+import IconButton from '../common/IconButton';
 const ThemeIcons = {
 	light: Sun,
 	dark: Moon,

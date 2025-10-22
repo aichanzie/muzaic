@@ -1,8 +1,8 @@
-import { Bell, Home, Library, Settings } from 'lucide-react';
+import { Bell, Library, Settings } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IconButton from '../../common/IconButton/IconButton';
-import ThemeToggle from '../../widgets/ThemeToggle/ThemeToggle';
+import IconButton from '../common/IconButton';
+import ThemeToggle from '../widgets/ThemeToggle';
 
 const NavigationBar: React.FC = () => {
 	const logoStyle = 'text-2xl font-bold text-primary hover:text-primary-dark transition-colors';
